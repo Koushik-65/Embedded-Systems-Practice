@@ -1,0 +1,8 @@
+# Local secrets / environment files
+secrets.h
+.env
+
+# Arduino / editor artifacts
+.vscode/
+*.tmp
+*.bak
