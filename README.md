@@ -1,19 +1,33 @@
 # Embedded Systems Practice
 
-A collection of small embedded-systems projects built while learning practical microcontroller development with ESP32, sensors, networking, storage, interrupts, and device control.
+Hands-on ESP32 projects exploring firmware fundamentals: GPIO, interrupts, hardware timers, PWM, UART, I2C, ADC, networking, sensors, and data logging.
 
-## Projects
+## Project Showcase
 
-### Ultrasonic Distance Data Logger
-ESP32 project that measures distance with an ultrasonic sensor, timestamps readings using NTP, and logs measurements to a microSD card as CSV data.
+| Project | What it demonstrates |
+|---|---|
+| [Ultrasonic Distance Data Logger](./ultrasonic-distance-data-logger) | Ultrasonic ranging, NTP timestamps, microSD/CSV logging |
+| [Motion Security System](./motion-security-system-discord) | PIR sensing, Wi-Fi/HTTP, state-change detection, remote alerts |
+| [Reaction Time Tester](./reaction-time-tester) | GPIO interrupts, `micros()`, hardware timers, ISR state |
+| [PWM DC Motor Controller](./pwm-dc-motor-controller) | PWM, L293D H-bridge, motor direction, interrupts |
+| [UART Embedded Console](./uart-embedded-console) | Serial communication, manual command parsing, buffer handling |
+| [MPU6050 + LCD Sensor Monitor](./mpu6050-lcd-sensor-monitor) | I2C, MPU6050 IMU, LCD output, ADC |
 
-**Concepts:** GPIO, pulse timing, Wi-Fi, NTP, SD_MMC, file I/O
+## Platform
 
-### Motion Security System with Discord Alerts
-ESP32 motion-detection security system with arm/disarm control, buzzer alerts, timestamped events, and Discord webhook notifications.
+- **Microcontroller:** ESP32
+- **Framework:** Arduino / C++
+- **Interfaces:** GPIO, UART, I2C, ADC, PWM
+- **Other topics:** interrupts, hardware timers, Wi-Fi, HTTP, NTP, microSD storage
 
-**Concepts:** GPIO, state-change detection, HTTP requests, Wi-Fi, PIR sensing, timestamps
+## Repository Structure
 
-## Notes
+Each project has its own directory containing the firmware and a README with hardware, pin assignments, behavior, and concepts demonstrated.
 
-These are practice projects documenting my progress in embedded systems. Credentials and private service URLs are intentionally excluded from the repository.
+## Security
+
+Wi-Fi credentials, webhook URLs, and other secrets are intentionally excluded from the public source. Replace placeholders locally before flashing projects that require network access.
+
+## About
+
+This repository documents my progression in embedded-systems and firmware development through practical ESP32 projects.
