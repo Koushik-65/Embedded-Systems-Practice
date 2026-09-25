@@ -1,31 +1,16 @@
 # MPU6050 + LCD Sensor Monitor
 
-ESP32 sensor-monitoring project that combines an MPU6050 inertial measurement unit, a 16x2 I2C LCD, and an analog potentiometer.
+ESP32 sensor-monitoring project that combines an MPU6050 inertial measurement unit, an I2C LCD, and an analog potentiometer to display live sensor data.
 
-## Hardware
-- ESP32
-- MPU6050 accelerometer/gyroscope
-- 16x2 I2C LCD (`0x27`)
-- Potentiometer
-
-## Pinout
-| Signal | ESP32 GPIO |
-|---|---:|
-| I2C SDA | 26 |
-| I2C SCL | 25 |
-| Potentiometer output | 34 |
-
-The MPU6050 uses I2C address `0x68`.
-
-## Measurements
-The display cycles through potentiometer ADC value, MPU6050 temperature, three-axis acceleration, and three-axis gyroscope data.
+## Key Features
+- Three-axis acceleration and gyroscope measurements
+- Temperature readings from the MPU6050
+- Analog potentiometer input
+- Live measurements displayed on a 16x2 LCD
+- Multiple devices communicating over I2C
 
 ## Concepts Demonstrated
-I2C communication, multiple devices on one bus, ADC input, sensor libraries, structured sensor data, and LCD output.
+I2C communication, ADC input, sensor interfacing, structured sensor data, and embedded display output.
 
-## Required Libraries
-- Adafruit MPU6050
-- Adafruit Unified Sensor
-- LiquidCrystal I2C
-
-The firmware checks MPU6050 initialization and stops with an error message if the sensor cannot be found.
+## Libraries
+Adafruit MPU6050, Adafruit Unified Sensor, and LiquidCrystal I2C.
