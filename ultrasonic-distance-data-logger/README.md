@@ -1,25 +1,16 @@
 # Ultrasonic Distance Data Logger
 
-Measures distance using an ultrasonic sensor and records timestamped readings to a microSD card.
+ESP32 data-logging project that measures distance with an ultrasonic sensor, timestamps each valid reading, and stores the measurements as CSV data on a microSD card.
 
-## Hardware
-- ESP32
-- Ultrasonic distance sensor
-- microSD card
-
-## Features
+## Key Features
 - Ultrasonic distance measurement
-- NTP-based time synchronization
-- Central Time timezone configuration
-- CSV logging to microSD
-- Serial Monitor output
+- NTP-based timestamp synchronization over Wi-Fi
+- CSV data logging to microSD
+- Serial output for live measurements
+- Invalid/timeout readings ignored
 
-## Wiring Used
-- TRIG -> GPIO 12
-- ECHO -> GPIO 13
-
-## Output
-The program creates `data.csv` with timestamp and distance values.
+## Concepts Demonstrated
+GPIO, pulse timing, Wi-Fi, NTP, SD card storage, file I/O, and sensor data logging.
 
 ## Setup
-Before uploading, replace the Wi-Fi placeholders in the sketch with your own credentials. Do not commit real credentials to a public repository.
+Wi-Fi credentials are intentionally excluded from the public source and must be configured before use.
