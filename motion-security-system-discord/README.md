@@ -1,16 +1,59 @@
-# Motion Security System with Discord Alerts
+<div align="center">
 
-ESP32 security-system project that detects motion, provides a local alarm, and sends timestamped alerts to Discord over Wi-Fi.
+# 🚨 ESP32 Motion Security System
+
+**Network-connected motion detection with local alarms, state-aware event handling, and timestamped Discord notifications.**
+
+`ESP32` · `C/C++` · `PIR` · `Wi-Fi` · `HTTP` · `Webhooks` · `NTP`
+
+</div>
+
+---
+
+## Overview
+
+This project implements a small connected security system around the ESP32. When armed, a PIR sensor detects motion, activates a local buzzer, and sends a timestamped alert through a Discord webhook.
+
+State-change detection prevents the firmware from repeatedly sending notifications while the same motion event remains active. The system can also be armed or disarmed locally.
 
 ## Key Features
-- PIR motion detection
-- Arm/disarm control
-- Local buzzer alarm
-- Timestamped Discord webhook notifications
-- State-change detection to prevent repeated alerts for one motion event
 
-## Concepts Demonstrated
-GPIO, sensor interfacing, state-change detection, Wi-Fi networking, HTTP requests, webhooks, and NTP-based timestamps.
+- Arm/disarm system state
+- PIR-based motion detection
+- Local audible alarm
+- Timestamped remote notifications
+- Wi-Fi and HTTP communication
+- State-change detection to suppress duplicate alerts
 
-## Setup
-Wi-Fi credentials and the Discord webhook URL are intentionally excluded from the public source and must be configured before use.
+## Event Flow
+
+```text
+Motion Detected
+      ↓
+State Change Check
+      ↓
+ ┌───────────────┐
+ │ Local Buzzer  │
+ └───────────────┘
+      ↓
+NTP Timestamp
+      ↓
+HTTP Webhook
+      ↓
+Discord Alert
+```
+
+## Embedded Concepts
+
+| Concept | Application |
+|---|---|
+| **PIR Sensing** | Detects environmental motion |
+| **State Detection** | Sends one alert per motion event |
+| **Wi-Fi** | Provides network connectivity |
+| **HTTP/Webhooks** | Sends remote event notifications |
+| **NTP** | Adds synchronized timestamps to alerts |
+| **System State** | Controls armed and disarmed behavior |
+
+## Configuration
+
+Wi-Fi credentials and the Discord webhook URL are intentionally excluded from the public source and must be configured locally before use.
