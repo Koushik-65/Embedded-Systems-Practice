@@ -18,6 +18,12 @@ Rather than isolated code exercises, the projects combine hardware and firmware 
 
 ## Projects
 
+### 🛡️ [FreeRTOS Real-Time Security System](./freertos-real-time-security-system)
+Multi-sensor ESP32 security system that uses separate FreeRTOS tasks and queues for sensing, intrusion decisions, display output, and Blynk communication.
+
+**Focus:** `FreeRTOS` `Tasks` `Queues` `I2C` `Blynk` `Multi-Sensor Integration`
+
+
 ### ⏱️ [Reaction Time Tester](./reaction-time-tester)
 Interrupt-driven reaction timer that measures button response time with microsecond-resolution timing and schedules new rounds using an ESP32 hardware timer.
 
@@ -65,6 +71,7 @@ Motion-triggered security system with arm/disarm control, local alarm output, st
 
 ```text
 Embedded-Systems-Practice/
+├── freertos-real-time-security-system/
 ├── reaction-time-tester/
 ├── pwm-dc-motor-controller/
 ├── uart-embedded-console/
